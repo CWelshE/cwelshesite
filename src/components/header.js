@@ -1,9 +1,18 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import styled from 'react-emotion';
+
+const StyledHeader = styled('div')`
+  display: flex;
+  background: red;
+`;
 
 const Header = props => {
-  <div>{props.text}</div>;
+  return <StyledHeader>{props.text}</StyledHeader>;
+};
+
+Header.propTypes = {
+  text: PropTypes.string.isRequired,
 };
 
 export default Header;
