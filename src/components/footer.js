@@ -3,28 +3,31 @@ import styled, { css } from 'react-emotion';
 
 const StyledFooter = styled('footer')`
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100px;
-  justify-content: space-around;
 `;
 
 // A grid with 3 equal columns and two equal rows
-const footerSection = css`
+const section = css`
   display: grid;
-  width: auto;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 50% 50%;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  > span:first-of-type {
+    border: 1px solid red;
+  }
 `;
 
-const FooterLeft = <div className={footerSection}>x</div>;
+const FooterSection = (
+  <div className={section}>
+    <span>
+      Copyright &copy; Cody Welsh, 2018 and onwards. All rights reserved.
+    </span>
+    <span>If nothing else, please try to be kind to other people.</span>
+  </div>
+);
 
 const Footer = () => {
-  return (
-    <StyledFooter>
-      {FooterLeft}
-      {FooterLeft}
-    </StyledFooter>
-  );
+  return <StyledFooter>{FooterSection}</StyledFooter>;
 };
 
 export default Footer;
