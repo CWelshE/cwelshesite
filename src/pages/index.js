@@ -1,12 +1,13 @@
 import React from 'react';
 
 import Layout from '../components/layout';
+import text from '../constants/text';
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi. I&apos;m Cody.</h1>
+    <h2 className={text.subheader}>Hi. I&apos;m Cody.</h2>
     <p>
-      My main passion is software engineering. Right now, I work on websites,
+      My passion is software engineering. Right now, I work on websites,
       experiments, procedural art, and all manner of applications.
     </p>
     <p>
