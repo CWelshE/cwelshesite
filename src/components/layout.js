@@ -10,6 +10,10 @@ import Footer from './footer';
 import { css } from 'react-emotion';
 import './layout.css';
 import text from '../constants/text.js';
+import Navigation from './navigation';
+
+// Given to react-helmet
+import favicon from '../../public/favicon.png';
 
 // Applied to `html`.
 const docStyles = css`
@@ -20,14 +24,11 @@ const docStyles = css`
 
 // Applied to children of Layout.
 const wrapperStyles = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   font-family: ${text.default.typeface};
   color: ${text.colors.primary};
   max-width: 600px;
   min-height: 100vh;
-  margin: 0 0 0 calc(13vw - 35px);
+  margin: 0 calc(13vw - 35px);
 `;
 
 const Layout = ({ children }) => (
@@ -44,10 +45,13 @@ const Layout = ({ children }) => (
     render={data => (
       <React.Fragment>
         <div className={wrapperStyles}>
-          <Helmet title={data.site.siteMetadata.title} meta={[]}>
+          <Helmet>
+            <title>{data.site.siteMetadata.title}</title>
+            <link rel="icon" type="image/png" href={favicon} />
             <html className={docStyles} lang="en" />
           </Helmet>
           <Header text={data.site.siteMetadata.title} />
+          <Navigation />
           <div>{children}</div>
         </div>
         <Footer />
