@@ -3,26 +3,26 @@ import styled, { css } from 'react-emotion';
 import text from '../constants/text';
 
 const StyledFooter = styled('footer')`
-  display: flex;
-  width: 100%;
-  height: 100px;
   font-size: smaller;
   background: rgba(0, 0, 0, 0.2);
+  padding: 0 calc(13vw - 35px);
 `;
 
-// A grid with 3 equal columns and two equal rows
+// A grid with 3 equal columns and 3 equal rows
 const section = css`
   font-family: ${text.default.typeface};
   color: ${text.colors.primary};
   display: grid;
   width: 100%;
-  grid-template-columns: 33% 33% 33%;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
   > span {
-    padding-top: 2rem;
+    margin: auto 0;
   }
   > span:first-of-type {
-    vertical-align: middle;
-    padding-left: calc(13vw - 35px);
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  > span:last-of-type {
+    grid-area: 2 / 3 / 3 / 4;
   }
 `;
 
@@ -31,7 +31,6 @@ const FooterSection = (
     <span>
       Copyright &copy; Cody Welsh, 2018 and onwards. All rights reserved.
     </span>
-    <span />
     <span>
       If nothing else, please try to be kind to other people. Everyone is
       fighting their own battle in life.
