@@ -1,22 +1,7 @@
 // Assorted values for text styles
 import styled, { css } from 'react-emotion';
 import mq from './breakpoints';
-
-// See the following for excellent CSS lock math:
-// https://fvsch.com/css-locks/#toc-1-b
-const generateQueries = (fontDefault, fontIncrease, breakMin, breakMax) => {
-  const fontSlope = fontIncrease / (breakMax - breakMin);
-  return `font-size: ${fontDefault}rem;
-
-    @media screen and (min-width: ${breakMin}px) {
-      font-size: calc(${fontDefault}rem + ${fontSlope * 100}vw + ${0 -
-    fontSlope * breakMin}px);
-    }
-
-    @media screen and (min-width: ${breakMax}px) {
-      font-size: calc(${fontDefault}rem + ${fontIncrease}px);
-  }`;
-};
+import generateQueries from './helperfuncs';
 
 // Object containing common text styles
 const text = {
@@ -29,6 +14,17 @@ const text = {
     max-width: 550px;
 
     ${generateQueries(2.5, 30, mq[0], mq[1])};
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    &:after {
+      content: '_';
+      animation: blink 1s step-start infinite;
+    }
   `,
   subheader: css`
     margin: 0;
