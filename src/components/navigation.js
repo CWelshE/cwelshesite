@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled, { css } from 'react-emotion';
 
-import generateQueries from '../constants/helperfuncs';
-
 import homeIcon from '../../public/images/icon_home.svg';
 import blogIcon from '../../public/images/icon_blog.svg';
 import projectIcon from '../../public/images/icon_project.svg';
@@ -47,7 +45,7 @@ const linksTo = Object.keys(links).map((attrs, idx) => {
   );
 });
 
-const LinksContainer = styled('div')`
+const LinksContainer = styled('nav')`
   display: flex;
   justify-content: space-between;
   max-width: 23rem;
@@ -55,6 +53,41 @@ const LinksContainer = styled('div')`
   margin-bottom: 2rem;
 `;
 
-const Navigation = () => <LinksContainer>{linksTo}</LinksContainer>;
+const MobMenuToggle = styled('button')`
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #fff;
+
+  @media screen and (min-width: 390px) {
+    display: none;
+  }
+`;
+
+class Navigation extends React.Component {
+  constructor() {
+    super();
+    this.state = { collapsed: false };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(state => ({
+      collapsed: !state.collapsed,
+    }));
+  }
+
+  render() {
+    return (
+      <div>
+        <MobMenuToggle onClick={this.handleClick} />
+        {this.state.collapsed ? null : (
+          <LinksContainer>{linksTo}</LinksContainer>
+        )}
+      </div>
+    );
+  }
+}
 
 export default Navigation;
