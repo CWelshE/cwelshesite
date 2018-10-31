@@ -3,12 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import 'typeface-roboto-slab';
 
 // Non-library component imports
 import Header from './header';
 import Footer from './footer';
 import { css } from 'react-emotion';
-import './layout.css';
 import text from '../constants/text.js';
 import Navigation from './navigation';
 
@@ -17,18 +17,28 @@ import favicon from '../../public/favicon.png';
 
 // Applied to `html`.
 const docStyles = css`
-  background-color: #24242d;
+  * {
+    box-sizing: border-box;
+  }
+  background: #2f313f;
   margin: 0;
   padding: 0;
 `;
 
 // Applied to children of Layout.
 const wrapperStyles = css`
+  background: rgba(0, 0, 0, 0.2);
   font-family: ${text.default.typeface};
   color: ${text.colors.primary};
   max-width: 600px;
   min-height: 100vh;
-  margin: 0 calc(13vw - 35px);
+  margin: 0 calc(13vw - 45px);
+  padding-top: 1.5rem;
+  border-radius: 5px;
+
+  > * {
+    padding: 0 calc(5vw - 15px);
+  }
 `;
 
 const Layout = ({ children }) => (
@@ -53,8 +63,8 @@ const Layout = ({ children }) => (
           <Header text={data.site.siteMetadata.title} />
           <Navigation />
           <div>{children}</div>
+          <Footer />
         </div>
-        <Footer />
       </React.Fragment>
     )}
   />
