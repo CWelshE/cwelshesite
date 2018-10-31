@@ -11,7 +11,7 @@ const text = {
   header: styled('h1')`
     display: flex;
     margin: 10px 0;
-    max-width: 550px;
+    border-bottom: 5px solid;
 
     ${generateQueries(2.5, 30, mq[0], mq[1])};
 
@@ -32,7 +32,7 @@ const text = {
     ${generateQueries(1.75, 20, mq[0], mq[1])};
   `,
   colors: {
-    primary: '#e0dfd5',
+    primary: 'rgba(255,255,255)',
   },
 };
 

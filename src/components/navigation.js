@@ -1,6 +1,9 @@
+// Navigation displayed below primary site header
 import React from 'react';
 import { Link } from 'gatsby';
 import styled, { css } from 'react-emotion';
+import mq from '../constants/breakpoints.js';
+import generateQueries from '../constants/helperfuncs';
 
 import homeIcon from '../../public/images/icon_home.svg';
 import blogIcon from '../../public/images/icon_blog.svg';
@@ -19,6 +22,7 @@ const StyledLink = styled(Link)`
   color: inherit;
   text-decoration: none;
   margin-right: 1em;
+  ${generateQueries(1, 8, mq[0], mq[1])};
 `;
 
 const linkContainer = css`
@@ -31,6 +35,10 @@ const linkContainer = css`
   > img {
     height: 100%;
     margin-right: 0.5rem;
+  }
+
+  @media screen and (max-width: ${mq[0]}px) {
+    margin: 0.5em 0;
   }
 `;
 
@@ -48,18 +56,43 @@ const linksTo = Object.keys(links).map((attrs, idx) => {
 const LinksContainer = styled('nav')`
   display: flex;
   justify-content: space-between;
-  max-width: 23rem;
-  border-top: 5px solid;
   margin-bottom: 2rem;
+
+  @media screen and (max-width: ${mq[0]}px) {
+    display: none;
+  }
+`;
+
+const MobileLinksContainer = styled('nav')`
+  background: rgb(30, 30, 30);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  top: 20px;
+  right: calc(13vw - 27px);
+  width: 180px;
+  height: 200px;
+  border-radius: 5px;
+
+  @media screen and (min-width: ${mq[0]}px) {
+    display: none;
+  }
 `;
 
 const MobMenuToggle = styled('button')`
-  display: inline-block;
-  width: 3.5rem;
-  height: 3.5rem;
-  background: #fff;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  z-index: 99;
+  position: fixed;
+  top: 20px;
+  right: calc(13vw - 27px);
+  border: 0;
+  background: rgba(0, 0, 0, 0.3);
 
-  @media screen and (min-width: 390px) {
+  @media screen and (min-width: ${mq[0]}px) {
     display: none;
   }
 `;
@@ -67,7 +100,7 @@ const MobMenuToggle = styled('button')`
 class Navigation extends React.Component {
   constructor() {
     super();
-    this.state = { collapsed: false };
+    this.state = { collapsed: true };
 
     this.handleClick = this.handleClick.bind(this);
   }
@@ -81,9 +114,10 @@ class Navigation extends React.Component {
   render() {
     return (
       <div>
-        <MobMenuToggle onClick={this.handleClick} />
+        <MobMenuToggle onClick={this.handleClick}>=</MobMenuToggle>
+        <LinksContainer>{linksTo}</LinksContainer>
         {this.state.collapsed ? null : (
-          <LinksContainer>{linksTo}</LinksContainer>
+          <MobileLinksContainer>{linksTo}</MobileLinksContainer>
         )}
       </div>
     );
