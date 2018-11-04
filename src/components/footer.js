@@ -13,7 +13,7 @@ const section = css`
   color: ${text.colors.primary};
   flex-wrap: wrap;
   max-width: 600px;
-  padding: 2rem;
+  padding: 2rem 0;
 `;
 
 const FooterSection = (

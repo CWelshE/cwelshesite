@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { css } from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import Layout from '../components/layout';
 import PropTypes from 'prop-types';
+
+const StyledLink = styled(Link)`
+  color: #fff;
+  &:visited {
+    color: #fff;
+  }
+`;
 
 const blog = ({ data }) => {
   return (
@@ -12,18 +19,12 @@ const blog = ({ data }) => {
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link to={node.fields.slug}>
+            <StyledLink to={node.fields.slug}>
               <h3>
                 {node.frontmatter.title}{' '}
-                <span
-                  className={css`
-                    color: #bbb;
-                  `}
-                >
-                  — {node.frontmatter.date}
-                </span>
+                <span> — {node.frontmatter.date} </span>
               </h3>
-            </Link>
+            </StyledLink>
             <p>{node.excerpt}</p>
           </div>
         ))}

@@ -30,14 +30,19 @@ const wrapperStyles = css`
   background: rgba(0, 0, 0, 0.2);
   font-family: ${text.default.typeface};
   color: ${text.colors.primary};
-  max-width: 600px;
-  min-height: 100vh;
-  margin: 0 calc(13vw - 45px);
+  max-width: calc(80vw);
+  min-height: 500px;
+  margin: 0 auto;
   padding-top: 1.5rem;
   border-radius: 5px;
 
   > * {
     padding: 0 calc(5vw - 15px);
+  }
+
+  @media screen and (max-width: 550px) {
+    max-width: 95vw;
+    padding: 1em;
   }
 `;
 
