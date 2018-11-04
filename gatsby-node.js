@@ -22,8 +22,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+// Make Markdown slugs and blog posts.
+exports.createPages = ({ graphql, actions: { createPage } }) => {
   return new Promise(resolve => {
     graphql(`
       {
