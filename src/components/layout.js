@@ -13,7 +13,7 @@ import text from '../constants/text.js';
 import Navigation from './navigation';
 
 // Given to react-helmet
-import favicon from '../../public/favicon.png';
+import favicon from '../images/favicon.png';
 
 // Applied to `html`.
 const docStyles = css`
