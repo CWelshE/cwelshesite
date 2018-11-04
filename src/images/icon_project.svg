@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="icon_project.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 31.424659 20.575048"
+   height="20.575048mm"
+   width="31.42466mm">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       refY="0"
+       refX="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Send"
+       inkscape:isstock="true"
+       id="marker5100">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+         id="path5098"
+         d="M 8.72,4.03 -2.21,0.02 8.72,-4 c -1.75,2.37 -1.74,5.62 0,8.03 z" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       refY="0"
+       refX="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Sstart"
+       inkscape:isstock="true"
+       id="marker4766">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(0.3,0,0,0.3,-0.69,0)"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+         id="path4764"
+         d="M 8.72,4.03 -2.21,0.02 8.72,-4 c -1.75,2.37 -1.74,5.62 0,8.03 z" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="41"
+     inkscape:window-x="0"
+     inkscape:window-height="1027"
+     inkscape:window-width="1908"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="46.492246"
+     inkscape:cx="127.95111"
+     inkscape:zoom="3.959798"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:measure-start="64.3972,63.6396"
+     inkscape:measure-end="38.3227,63.6396">
+    <sodipodi:guide
+       position="22.833707,11.219912"
+       orientation="1,0"
+       id="guide5210"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="21.969572,3.9337421"
+       orientation="0,1"
+       id="guide5284"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-59.062794,-112.49336)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.63802075px;line-height:6.61458302px;font-family:'Fira Mono';-inkscape-font-specification:'Fira Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="80.610268"
+       y="114.36496"
+       id="text5154"><tspan
+         sodipodi:role="line"
+         id="tspan5152"
+         x="80.610268"
+         y="118.68787"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Mono';-inkscape-font-specification:'Fira Mono';stroke-width:0.26458332px" /></text>
+    <g
+       id="g6893">
+      <rect
+         y="112.99336"
+         x="59.562794"
+         height="19.575048"
+         width="30.42466"
+         id="rect5288"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#e0dfd5;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+      <text
+         id="text5292"
+         y="125.60766"
+         x="61.490883"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.06529999px;line-height:18.30054474px;font-family:'Fira Mono';-inkscape-font-specification:'Fira Mono';letter-spacing:0px;word-spacing:0px;fill:#e0dfd5;fill-opacity:1;stroke:none;stroke-width:0.73202181px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Fira Mono';-inkscape-font-specification:'Fira Mono';fill:#e0dfd5;fill-opacity:1;stroke-width:0.73202181px"
+           y="125.60766"
+           x="61.490883"
+           id="tspan5290"
+           sodipodi:role="line">&gt;vim</tspan></text>
+    </g>
+  </g>
+</svg>

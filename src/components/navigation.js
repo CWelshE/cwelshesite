@@ -5,10 +5,10 @@ import styled, { css } from 'react-emotion';
 import mq from '../constants/breakpoints.js';
 import generateQueries from '../constants/helperfuncs';
 
-import homeIcon from '../../public/images/icon_home.svg';
-import blogIcon from '../../public/images/icon_blog.svg';
-import projectIcon from '../../public/images/icon_project.svg';
-import contactIcon from '../../public/images/icon_contact.svg';
+import homeIcon from '../images/icon_home.svg';
+import blogIcon from '../images/icon_blog.svg';
+import projectIcon from '../images/icon_project.svg';
+import contactIcon from '../images/icon_contact.svg';
 
 // Name to display: ['actuallink', [SVG icon]]
 const links = {
