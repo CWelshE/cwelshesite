@@ -1,4 +1,5 @@
 ---
+path: "/blog/new-beginnings"
 title: "New Beginnings"
 date: "2018-10-31"
 ---
