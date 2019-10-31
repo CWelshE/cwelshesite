@@ -5,7 +5,7 @@ import text from '../constants/text';
 
 const IndexPage = () => (
   <Layout>
-    <h2 className={text.subheader}>Hi. I&apos;m Cody.</h2>
+    <h2 css={text.subheader}>Hi. I&apos;m Cody.</h2>
     <p>
       My passion is software engineering. Right now, I work on websites,
       experiments, procedural art, and all manner of applications.

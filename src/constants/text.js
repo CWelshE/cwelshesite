@@ -1,5 +1,6 @@
 // Assorted values for text styles
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import mq from './breakpoints';
 import generateQueries from './helperfuncs';
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import text from '../constants/text';
 
 const StyledFooter = styled('footer')`
@@ -17,7 +18,7 @@ const section = css`
 `;
 
 const FooterSection = (
-  <div className={section}>
+  <div css={section}>
     <p>Copyright &copy; Cody Welsh, 2018 and onwards. All rights reserved.</p>
     <p>
       If nothing else, please try to be kind to other people. Everyone is

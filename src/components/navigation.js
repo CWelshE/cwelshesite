@@ -1,7 +1,8 @@
 // Navigation displayed below primary site header
 import React from 'react';
 import { Link } from 'gatsby';
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import mq from '../constants/breakpoints.js';
 import generateQueries from '../constants/helperfuncs';
 
@@ -44,7 +45,7 @@ const linkContainer = css`
 
 const linksTo = Object.keys(links).map((attrs, idx) => {
   return (
-    <div className={linkContainer} key={idx}>
+    <div css={linkContainer} key={idx}>
       <img src={links[attrs][1]} />
       <StyledLink to={links[attrs][0]} key={idx}>
         {attrs}

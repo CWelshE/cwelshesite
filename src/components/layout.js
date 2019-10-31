@@ -8,9 +8,11 @@ import 'typeface-roboto-slab';
 // Non-library component imports
 import Header from './header';
 import Footer from './footer';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import text from '../constants/text.js';
 import Navigation from './navigation';
+
+import './global.css';
 
 // Given to react-helmet
 import favicon from '../images/favicon.png';
@@ -19,6 +21,9 @@ import favicon from '../images/favicon.png';
 const docStyles = css`
   * {
     box-sizing: border-box;
+  }
+  html {
+    margin: 0;
   }
   background: #2f313f;
   margin: 0;
@@ -48,6 +53,7 @@ const wrapperStyles = css`
 
 const Layout = ({ children }) => (
   <StaticQuery
+    css={docStyles}
     query={graphql`
       query SiteTitleQuery {
         site {
@@ -58,19 +64,18 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <React.Fragment>
-        <div className={wrapperStyles}>
+      <div css={docStyles}>
+        <div css={wrapperStyles}>
           <Helmet>
             <title>{data.site.siteMetadata.title}</title>
             <link rel="icon" type="image/png" href={favicon} />
-            <html className={docStyles} lang="en" />
           </Helmet>
           <Header text={data.site.siteMetadata.title} />
           <Navigation />
           <div>{children}</div>
           <Footer />
         </div>
-      </React.Fragment>
+      </div>
     )}
   />
 );
