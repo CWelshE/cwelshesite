@@ -35,7 +35,7 @@ const StyledForm = styled('form')`
 const ContactPage = () => (
   <Layout>
     <h1>Send Me a Message!</h1>
-    <StyledForm name="contact" netlify>
+    <StyledForm name="contact" data-netlify="true" method="POST">
       <p>
         <label>
           Name <input type="text" name="name" required />
