@@ -36,6 +36,7 @@ const ContactPage = () => (
   <Layout>
     <h1>Send Me a Message!</h1>
     <StyledForm name="contact" data-netlify="true" method="POST">
+      <input type="hidden" name="form-name" value="contact" />
       <p>
         <label>
           Name <input type="text" name="name" required />
