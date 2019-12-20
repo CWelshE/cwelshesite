@@ -17,7 +17,7 @@ import './global.css';
 // Given to react-helmet
 import favicon from '../images/favicon.png';
 
-// Applied to `html`.
+// Applied to base layout.
 const docStyles = css`
   * {
     box-sizing: border-box;
@@ -25,6 +25,7 @@ const docStyles = css`
   html {
     margin: 0;
   }
+  min-height: 100vh;
   background: #2f313f;
   margin: 0;
   padding: 0;

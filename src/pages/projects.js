@@ -2,12 +2,17 @@ import React from 'react';
 import { css } from '@emotion/core';
 import Layout from '../components/layout';
 import Project from '../components/project';
+import mq from '../constants/breakpoints';
 
 import codekiteLogo from '../images/codekite-logo.svg';
 
 const projectsStyles = css`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: ${mq[0]}px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const projects = () => {
